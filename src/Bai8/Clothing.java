@@ -7,6 +7,6 @@ public class Clothing extends Product{
 
     @Override
     public double getDiscount() {
-        return 0.2;
+        return 20;
     }
 }

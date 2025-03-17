@@ -7,6 +7,6 @@ public class Electronics extends Product{
 
     @Override
     public double getDiscount() {
-        return 0.1;
+        return 10;
     }
 }

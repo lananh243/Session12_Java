@@ -9,17 +9,25 @@ public class Product {
         this.price = price;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     public double getDiscount() {
         return 0;
     }
 
     public double getFinalPrice() {
-        return price - (price * 0.1);
+        return price - (price * getDiscount() / 100);
     }
 
     public double getDiscount(int quantity) {
         if (quantity > 100) {
-            return 0.05;
+            return 5;
         }else{
             return getDiscount();
         }
@@ -27,6 +35,6 @@ public class Product {
 
     public double getFinalPrice(int quantity) {
         double discount = getDiscount(quantity);
-        return price - (price * discount);
+        return price - (price * discount / 100);
     }
 }

@@ -7,6 +7,6 @@ public class Food extends Product{
 
     @Override
     public double getDiscount() {
-        return 0.05;
+        return 5;
     }
 }
